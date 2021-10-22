@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:test/contact.dart';
+import 'package:test/story.dart';
 
 var Hpass = true;
 void main() {
@@ -113,80 +115,82 @@ class page2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomSheet: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Expanded(child: IconButton(onPressed: null, icon: Icon(Icons.chat))),
-          SizedBox(
-            width: 10,
-          ),
-          Expanded(
-              child: IconButton(onPressed: null, icon: Icon(Icons.people))),
-          SizedBox(
-            width: 10,
-          ),
-          Expanded(
-              child: IconButton(onPressed: null, icon: Icon(Icons.video_call))),
-          SizedBox(
-            width: 10,
-          )
-        ],
-      ),
-      appBar: AppBar(
-        titleSpacing: 20,
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: SafeArea(
-          child: Row(
-            children: [
-              SizedBox(
-                width: 10,
-              ),
-              CircleAvatar(
-                radius: 17,
-                backgroundImage: NetworkImage(
-                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZi6q5elXyTE38nTQQnrAYl2Vrl5b_dcxOQ&usqp=CAU'),
-              ),
-            ],
-          ),
+        bottomSheet: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Expanded(
+                child: IconButton(onPressed: null, icon: Icon(Icons.chat))),
+            SizedBox(
+              width: 10,
+            ),
+            Expanded(
+                child: IconButton(onPressed: null, icon: Icon(Icons.people))),
+            SizedBox(
+              width: 10,
+            ),
+            Expanded(
+                child:
+                    IconButton(onPressed: null, icon: Icon(Icons.video_call))),
+            SizedBox(
+              width: 10,
+            )
+          ],
         ),
-        title: Text(
-          "Chats",
-          style: TextStyle(fontSize: 20, color: Colors.black),
-        ),
-        actions: [
-          Row(
-            children: [
-              IconButton(
-                onPressed: null,
-                icon: CircleAvatar(
-                  radius: 15,
-                  backgroundColor: Colors.blue,
-                  child: Icon(
-                    Icons.camera_alt_outlined,
-                    size: 16,
-                    color: Colors.white,
+        appBar: AppBar(
+          titleSpacing: 20,
+          backgroundColor: Colors.white,
+          elevation: 0,
+          leading: SafeArea(
+            child: Row(
+              children: [
+                SizedBox(
+                  width: 10,
+                ),
+                CircleAvatar(
+                  radius: 17,
+                  backgroundImage: NetworkImage(
+                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZi6q5elXyTE38nTQQnrAYl2Vrl5b_dcxOQ&usqp=CAU'),
+                ),
+              ],
+            ),
+          ),
+          title: Text(
+            "Chats",
+            style: TextStyle(fontSize: 20, color: Colors.black),
+          ),
+          actions: [
+            Row(
+              children: [
+                IconButton(
+                  onPressed: null,
+                  icon: CircleAvatar(
+                    radius: 15,
+                    backgroundColor: Colors.blue,
+                    child: Icon(
+                      Icons.camera_alt_outlined,
+                      size: 16,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
-              ),
-              IconButton(
-                onPressed: null,
-                icon: CircleAvatar(
-                  radius: 15,
-                  backgroundColor: Colors.blue,
-                  child: Icon(
-                    Icons.edit,
-                    size: 16,
-                    color: Colors.white,
+                IconButton(
+                  onPressed: null,
+                  icon: CircleAvatar(
+                    radius: 15,
+                    backgroundColor: Colors.blue,
+                    child: Icon(
+                      Icons.edit,
+                      size: 16,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
-              ),
-            ],
-          )
-        ],
-      ),
-      body: Padding(
-          padding: const EdgeInsets.all(20),
+              ],
+            )
+          ],
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -208,858 +212,25 @@ class page2 extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 20,
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Container(
-                      width: 80,
-                      child: Column(
-                        children: [
-                          Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children: [
-                              CircleAvatar(
-                                radius: 30,
-                                backgroundImage: NetworkImage(
-                                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZi6q5elXyTE38nTQQnrAYl2Vrl5b_dcxOQ&usqp=CAU'),
-                              ),
-                              Container(
-                                decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    shape: BoxShape.circle),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(2.0),
-                                  child: CircleAvatar(
-                                    backgroundColor: Colors.green,
-                                    radius: 7,
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 6,
-                          ),
-                          Text(
-                            "tony fayez ",
-                            textAlign: TextAlign.right,
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 80,
-                      child: Column(
-                        children: [
-                          Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children: [
-                              CircleAvatar(
-                                radius: 30,
-                                backgroundImage: NetworkImage(
-                                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZi6q5elXyTE38nTQQnrAYl2Vrl5b_dcxOQ&usqp=CAU'),
-                              ),
-                              Container(
-                                decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    shape: BoxShape.circle),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(2.0),
-                                  child: CircleAvatar(
-                                    backgroundColor: Colors.green,
-                                    radius: 7,
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 6,
-                          ),
-                          Text(
-                            "tony fayez ",
-                            textAlign: TextAlign.right,
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 80,
-                      child: Column(
-                        children: [
-                          Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children: [
-                              CircleAvatar(
-                                radius: 30,
-                                backgroundImage: NetworkImage(
-                                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZi6q5elXyTE38nTQQnrAYl2Vrl5b_dcxOQ&usqp=CAU'),
-                              ),
-                              Container(
-                                decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    shape: BoxShape.circle),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(2.0),
-                                  child: CircleAvatar(
-                                    backgroundColor: Colors.green,
-                                    radius: 7,
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 6,
-                          ),
-                          Text(
-                            "tony fayez ",
-                            textAlign: TextAlign.right,
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 80,
-                      child: Column(
-                        children: [
-                          Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children: [
-                              CircleAvatar(
-                                radius: 30,
-                                backgroundImage: NetworkImage(
-                                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZi6q5elXyTE38nTQQnrAYl2Vrl5b_dcxOQ&usqp=CAU'),
-                              ),
-                              Container(
-                                decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    shape: BoxShape.circle),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(2.0),
-                                  child: CircleAvatar(
-                                    backgroundColor: Colors.green,
-                                    radius: 7,
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 6,
-                          ),
-                          Text(
-                            "tony fayez ",
-                            textAlign: TextAlign.right,
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 80,
-                      child: Column(
-                        children: [
-                          Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children: [
-                              CircleAvatar(
-                                radius: 30,
-                                backgroundImage: NetworkImage(
-                                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZi6q5elXyTE38nTQQnrAYl2Vrl5b_dcxOQ&usqp=CAU'),
-                              ),
-                              Container(
-                                decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    shape: BoxShape.circle),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(2.0),
-                                  child: CircleAvatar(
-                                    backgroundColor: Colors.green,
-                                    radius: 7,
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 6,
-                          ),
-                          Text(
-                            "tony fayez ",
-                            textAlign: TextAlign.right,
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 80,
-                      child: Column(
-                        children: [
-                          Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children: [
-                              CircleAvatar(
-                                radius: 30,
-                                backgroundImage: NetworkImage(
-                                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZi6q5elXyTE38nTQQnrAYl2Vrl5b_dcxOQ&usqp=CAU'),
-                              ),
-                              Container(
-                                decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    shape: BoxShape.circle),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(2.0),
-                                  child: CircleAvatar(
-                                    backgroundColor: Colors.green,
-                                    radius: 7,
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 6,
-                          ),
-                          Text(
-                            "tony fayez ",
-                            textAlign: TextAlign.right,
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
                 height: 10,
               ),
-              Expanded(
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      Container(
-                        child: Row(
-                          children: [
-                            Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children: [
-                                CircleAvatar(
-                                  radius: 30,
-                                  backgroundImage: NetworkImage(
-                                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZi6q5elXyTE38nTQQnrAYl2Vrl5b_dcxOQ&usqp=CAU'),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      shape: BoxShape.circle),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(2.0),
-                                    child: CircleAvatar(
-                                      backgroundColor: Colors.green,
-                                      radius: 7,
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Expanded(
-                              child: Text(
-                                "hello my name is tony fayez shashashashashashashashash ssssssssssssssssssssssssssssssssssssss",
-                                textAlign: TextAlign.left,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            Text("2:00 pm")
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 6,
-                      ),
-                      Container(
-                        child: Row(
-                          children: [
-                            Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children: [
-                                CircleAvatar(
-                                  radius: 30,
-                                  backgroundImage: NetworkImage(
-                                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZi6q5elXyTE38nTQQnrAYl2Vrl5b_dcxOQ&usqp=CAU'),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      shape: BoxShape.circle),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(2.0),
-                                    child: CircleAvatar(
-                                      backgroundColor: Colors.green,
-                                      radius: 7,
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Expanded(
-                              child: Text(
-                                "hello my name is tony fayez shashashashashashashashash ssssssssssssssssssssssssssssssssssssss",
-                                textAlign: TextAlign.left,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            Text("2:00 pm")
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 6,
-                      ),
-                      Container(
-                        child: Row(
-                          children: [
-                            Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children: [
-                                CircleAvatar(
-                                  radius: 30,
-                                  backgroundImage: NetworkImage(
-                                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZi6q5elXyTE38nTQQnrAYl2Vrl5b_dcxOQ&usqp=CAU'),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      shape: BoxShape.circle),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(2.0),
-                                    child: CircleAvatar(
-                                      backgroundColor: Colors.green,
-                                      radius: 7,
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Expanded(
-                              child: Text(
-                                "hello my name is tony fayez shashashashashashashashash ssssssssssssssssssssssssssssssssssssss",
-                                textAlign: TextAlign.left,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            Text("2:00 pm")
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 6,
-                      ),
-                      Container(
-                        child: Row(
-                          children: [
-                            Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children: [
-                                CircleAvatar(
-                                  radius: 30,
-                                  backgroundImage: NetworkImage(
-                                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZi6q5elXyTE38nTQQnrAYl2Vrl5b_dcxOQ&usqp=CAU'),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      shape: BoxShape.circle),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(2.0),
-                                    child: CircleAvatar(
-                                      backgroundColor: Colors.green,
-                                      radius: 7,
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Expanded(
-                              child: Text(
-                                "hello my name is tony fayez shashashashashashashashash ssssssssssssssssssssssssssssssssssssss",
-                                textAlign: TextAlign.left,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            Text("2:00 pm")
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 6,
-                      ),
-                      Container(
-                        child: Row(
-                          children: [
-                            Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children: [
-                                CircleAvatar(
-                                  radius: 30,
-                                  backgroundImage: NetworkImage(
-                                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZi6q5elXyTE38nTQQnrAYl2Vrl5b_dcxOQ&usqp=CAU'),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      shape: BoxShape.circle),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(2.0),
-                                    child: CircleAvatar(
-                                      backgroundColor: Colors.green,
-                                      radius: 7,
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Expanded(
-                              child: Text(
-                                "hello my name is tony fayez shashashashashashashashash ssssssssssssssssssssssssssssssssssssss",
-                                textAlign: TextAlign.left,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            Text("2:00 pm")
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 6,
-                      ),
-                      Container(
-                        child: Row(
-                          children: [
-                            Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children: [
-                                CircleAvatar(
-                                  radius: 30,
-                                  backgroundImage: NetworkImage(
-                                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZi6q5elXyTE38nTQQnrAYl2Vrl5b_dcxOQ&usqp=CAU'),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      shape: BoxShape.circle),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(2.0),
-                                    child: CircleAvatar(
-                                      backgroundColor: Colors.green,
-                                      radius: 7,
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Expanded(
-                              child: Text(
-                                "hello my name is tony fayez shashashashashashashashash ssssssssssssssssssssssssssssssssssssss",
-                                textAlign: TextAlign.left,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            Text("2:00 pm")
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 6,
-                      ),
-                      Container(
-                        child: Row(
-                          children: [
-                            Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children: [
-                                CircleAvatar(
-                                  radius: 30,
-                                  backgroundImage: NetworkImage(
-                                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZi6q5elXyTE38nTQQnrAYl2Vrl5b_dcxOQ&usqp=CAU'),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      shape: BoxShape.circle),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(2.0),
-                                    child: CircleAvatar(
-                                      backgroundColor: Colors.green,
-                                      radius: 7,
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Expanded(
-                              child: Text(
-                                "hello my name is tony fayez shashashashashashashashash ssssssssssssssssssssssssssssssssssssss",
-                                textAlign: TextAlign.left,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            Text("2:00 pm")
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 6,
-                      ),
-                      Container(
-                        child: Row(
-                          children: [
-                            Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children: [
-                                CircleAvatar(
-                                  radius: 30,
-                                  backgroundImage: NetworkImage(
-                                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZi6q5elXyTE38nTQQnrAYl2Vrl5b_dcxOQ&usqp=CAU'),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      shape: BoxShape.circle),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(2.0),
-                                    child: CircleAvatar(
-                                      backgroundColor: Colors.green,
-                                      radius: 7,
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Expanded(
-                              child: Text(
-                                "hello my name is tony fayez shashashashashashashashash ssssssssssssssssssssssssssssssssssssss",
-                                textAlign: TextAlign.left,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            Text("2:00 pm")
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 6,
-                      ),
-                      Container(
-                        child: Row(
-                          children: [
-                            Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children: [
-                                CircleAvatar(
-                                  radius: 30,
-                                  backgroundImage: NetworkImage(
-                                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZi6q5elXyTE38nTQQnrAYl2Vrl5b_dcxOQ&usqp=CAU'),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      shape: BoxShape.circle),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(2.0),
-                                    child: CircleAvatar(
-                                      backgroundColor: Colors.green,
-                                      radius: 7,
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Expanded(
-                              child: Text(
-                                "hello my name is tony fayez shashashashashashashashash ssssssssssssssssssssssssssssssssssssss",
-                                textAlign: TextAlign.left,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            Text("2:00 pm")
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 6,
-                      ),
-                      Container(
-                        child: Row(
-                          children: [
-                            Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children: [
-                                CircleAvatar(
-                                  radius: 30,
-                                  backgroundImage: NetworkImage(
-                                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZi6q5elXyTE38nTQQnrAYl2Vrl5b_dcxOQ&usqp=CAU'),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      shape: BoxShape.circle),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(2.0),
-                                    child: CircleAvatar(
-                                      backgroundColor: Colors.green,
-                                      radius: 7,
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Expanded(
-                              child: Text(
-                                "hello my name is tony fayez shashashashashashashashash ssssssssssssssssssssssssssssssssssssss",
-                                textAlign: TextAlign.left,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            Text("2:00 pm")
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 6,
-                      ),
-                      Container(
-                        child: Row(
-                          children: [
-                            Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children: [
-                                CircleAvatar(
-                                  radius: 30,
-                                  backgroundImage: NetworkImage(
-                                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZi6q5elXyTE38nTQQnrAYl2Vrl5b_dcxOQ&usqp=CAU'),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      shape: BoxShape.circle),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(2.0),
-                                    child: CircleAvatar(
-                                      backgroundColor: Colors.green,
-                                      radius: 7,
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Expanded(
-                              child: Text(
-                                "hello my name is tony fayez shashashashashashashashash ssssssssssssssssssssssssssssssssssssss",
-                                textAlign: TextAlign.left,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            Text("2:00 pm")
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 6,
-                      ),
-                      Container(
-                        child: Row(
-                          children: [
-                            Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children: [
-                                CircleAvatar(
-                                  radius: 30,
-                                  backgroundImage: NetworkImage(
-                                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZi6q5elXyTE38nTQQnrAYl2Vrl5b_dcxOQ&usqp=CAU'),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      shape: BoxShape.circle),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(2.0),
-                                    child: CircleAvatar(
-                                      backgroundColor: Colors.green,
-                                      radius: 7,
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Expanded(
-                              child: Text(
-                                "hello my name is tony fayez shashashashashashashashash ssssssssssssssssssssssssssssssssssssss",
-                                textAlign: TextAlign.left,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            Text("2:00 pm")
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 6,
-                      ),
-                      Container(
-                        child: Row(
-                          children: [
-                            Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children: [
-                                CircleAvatar(
-                                  radius: 30,
-                                  backgroundImage: NetworkImage(
-                                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZi6q5elXyTE38nTQQnrAYl2Vrl5b_dcxOQ&usqp=CAU'),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      shape: BoxShape.circle),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(2.0),
-                                    child: CircleAvatar(
-                                      backgroundColor: Colors.green,
-                                      radius: 7,
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Expanded(
-                              child: Text(
-                                "hello my name is tony fayez shashashashashashashashash ssssssssssssssssssssssssssssssssssssss",
-                                textAlign: TextAlign.left,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            Text("2:00 pm")
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 6,
-                      ),
-                      Container(
-                        child: Row(
-                          children: [
-                            Stack(
-                              alignment: AlignmentDirectional.bottomEnd,
-                              children: [
-                                CircleAvatar(
-                                  radius: 30,
-                                  backgroundImage: NetworkImage(
-                                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZi6q5elXyTE38nTQQnrAYl2Vrl5b_dcxOQ&usqp=CAU'),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      shape: BoxShape.circle),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(2.0),
-                                    child: CircleAvatar(
-                                      backgroundColor: Colors.green,
-                                      radius: 7,
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            Expanded(
-                              child: Text(
-                                "hello my name is tony fayez shashashashashashashashash ssssssssssssssssssssssssssssssssssssss",
-                                textAlign: TextAlign.left,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            Text("2:00 pm")
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 6,
-                      ),
-                    ],
-                  ),
+              Container(
+                height: 90,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) => story(),
+                  itemCount: 15,
                 ),
               ),
+              Expanded(
+                  child: ListView.separated(
+                      itemBuilder: (context, index) => contact(),
+                      separatorBuilder: (context, index) => SizedBox(
+                            height: 20,
+                          ),
+                      itemCount: 15)),
             ],
-          )),
-    );
+          ),
+        ));
   }
 }
